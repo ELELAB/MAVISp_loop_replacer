@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+
+# loop_replacer: replace long disordered loops with shorter stretches
+# Copyright (C) 2024 Laura Bauer, Matteo Tiberti, Danish Cancer Institute
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import argparse
+import os
+from modeller import *              # Load standard Modeller classes
+from modeller.automodel import *    # Load the AutoModel class
+
+class TrimmedLoopModel(AutoModel):
+    def __init__(self, *args, loop_definition, **kwargs):
+
+        super().__init__(*args, **kwargs)
+        self.loop_definition = loop_definition
+
+    def user_after_single_model(self):
+        # each model:
+        self.rename_segments(segment_ids=('A'), renumber_residues=[1])
+
+    def select_atoms(self):
+        # Initialize an empty list to collect the selected residues
+        selected_residues = []
+
+        # Define the loop_position dictionary (this should be provided)
+        # Iterate over each position and residue range in loop_position
+        for position, residue in self.loop_definition.items():
+            start, end = position.split(":")
+            add_start, add_end = residue.split(":")
+            start_position = int(start) + int(add_start)
+            end_position = int(end) - int(add_end) - 1
+
+            # Create a range from start_position to end_position
+            for i in range(start_position, end_position + 1):
+                # Append each residue to the list
+                selected_residues.append(self.residues['{}:A'.format(i)])
+
+        # Unpack the list of residues and pass them to the selection function
+        return Selection(*selected_residues)
+
+def main():
+
+    parser = argparse.ArgumentParser(description='Automates protein structure linker modeling with MODELLER.')
+
+    parser.add_argument("-f", "--fasta", type=str, required=True, help="Path to the input FASTA file containing the protein sequence.")
+    parser.add_argument("-u", "--uniprot-id", type=str, required=True, help="UniProt ID of the protein to model.")
+    parser.add_argument("-l", "--loop", type=str, required=True, nargs='+', help="Loop positions in the sequence to be modeled, provided as start:end pairs.")
+    parser.add_argument("-r", "--residues", type=str, required=True, nargs='+', help="Residue modifications for each loop position, provided as start:end pairs.")
+    parser.add_argument("-c", "--chain", type=str, default='A', help="Chain identifier for the protein (default is 'A').")
+    parser.add_argument("-m", "--models", type=int, required=True, help="Number of models to generate.")
+    parser.add_argument("-p", "--pdb", type=str, required=True, help="Path to the PDB file.")
+
+    args = parser.parse_args()
+
+    sequence = ''
+    alignment_file_name = args.uniprot_id + ".ali"
+    loop_position = {args.loop[i]: args.residues[i] for i in range(len(args.loop))}
+
+    # Read fasta file and collect lines
+    with open(args.fasta, 'r') as fasta_file:
+        fasta_lines = fasta_file.readlines()
+
+    # Write to alignment file
+    with open(alignment_file_name, 'w') as alignment_file:
+        for line in fasta_lines[:-1]:
+            if not line.startswith(">"):
+                alignment_file.write(line)
+                sequence += line.strip("\n")
+            else:
+                alignment_file.write(f">P1;{args.uniprot_id}\n")
+                alignment_file.write(f"structureM:{args.pdb}::{args.chain}::::::\n")
+
+        alignment_file.write(f"{fasta_lines[-1][:-1]}*\n")
+        alignment_file.write(f">P1;{args.uniprot_id}_cut\n")
+        alignment_file.write("sequence" + ":::::::::" + "\n")
+        sequence += fasta_lines[-1].strip("\n")
+
+        for position, residue in loop_position.items():
+            start, end = position.split(":")
+            add_start, add_end = residue.split(":")
+            start_position = int(start) + int(add_start)
+            end_position = int(end) - int(add_end) - 1
+            gap_length = end_position - start_position
+
+            sequence = sequence[:start_position] + '-' * gap_length + sequence[end_position:]
+
+        alignment_file.write(sequence + "*")
+
+    log.verbose()    # request verbose output
+    env = Environ()  # create a new MODELLER environment to build this model in
+    env.io.hydrogen = True
+    env.io.hetatm = True
+    
+    a = TrimmedLoopModel(env,
+                         alnfile  = alignment_file_name,
+                         knowns   = args.uniprot_id,
+                         sequence = args.uniprot_id + "_cut",
+                         assess_methods = (assess.DOPE, assess.GA341),
+                         loop_definition = loop_position)
+
+    a.starting_model= 1
+    a.ending_model  = args.models
+    a.make()
+
+    # Get a list of all successfully built models from a.outputs
+    ok_models = [x for x in a.outputs if x['failure'] is None]
+    # Rank the models by DOPE score
+    key = 'DOPE score'
+    ok_models.sort(key=lambda x: x[key])
+    # Get top model
+    m = ok_models[0]
+    print("Top model: %s (DOPE score %.3f)" % (m['name'], m[key]))
+
+    print("\n")
+
+    print("RENUMBERING:")
+    log.level(output=1, notes=1, warnings=1, errors=1, memory=0)
+
+    # Read an alignment for the transfer
+    aln = alignment(env, file=args.uniprot_id+'.ali', align_codes=(args.uniprot_id, args.uniprot_id+'_cut'))
+    # Read the template and target models:
+    mdl2 = model(env, file=args.pdb)  # Use the pdb_path argument here
+
+    for i in range(len(ok_models)):
+        mdl  = model(env, file=ok_models[i]['name'])
+        # Transfer the residue and chain ids and write out the new MODEL:
+        mdl.res_num_from(mdl2, aln)
+        model_name = ok_models[i]['name'].split('.')
+        mdl.write(file=model_name[0] + "." + model_name[1] + "_renum.pdb" )
+
+if __name__ == '__main__':
+    main()
