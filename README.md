@@ -1,14 +1,28 @@
 # Protein Structure Linker Modeling with Modeller
 
 ## Description
-This Python script automates the process of protein structure linker modeling using Modeller. It generates models based on input sequences and defined loop regions with customizable parameters.
+This Python script automates the process of replacing long loops in protein structures with shorter ones, using MODELLER. 
+
+As input, it requires a protein structure model to be modified and information on the loops to be replaced. It is designed to replace a long loop with a shorter one, which is made of shorter snippets (start and end stretches) of the original loop. So for instance, if the sequence is something like:
+```
+       s          e
+...LQFSRTNAMGSRGEGEDM...
+```
+where `s` and `e` mark loop start and end, we replace it with something like:
+
+```
+       s    e     
+...LQFSRTNEGEDM...
+```
+
+so we just keep the first and last 3 residues of the loop. It should be noted that the rest of the structure is kept completely frozen, only the replaced loop is remodeled by this script.
 
 ## Requirements
   - Python >=3.7
   - [MODELLER software](https://salilab.org/modeller/)
 
 ## Setup
-  - Ensure Modeller and its dependencies are installed and accessible.
+  - Ensure MODELLER and its dependencies are installed and accessible.
   - Have the paths for the FASTA file and PDB file ready.
   - Have the uniprot id of the protein ready. 
 
@@ -22,8 +36,8 @@ This Python script automates the process of protein structure linker modeling us
      ```
     - Replace `<fasta_file>` with the path to your input FASTA file.
     - Replace `<uniprot_id>` with the uniprot id of the protein.
-    - `<loop_positions>` should be specified in the format "start:end start:end ...".
-    - `<residue_adjustments>` should correspond to the loop positions in the format "add_start:add_end add_start:add_end ...".
+    - `<loop_positions>` should be specified in the format "start:end start:end ...", and it corresponds to the start and end positions of the loop to be replaced.
+    - `<residue_adjustments>` should correspond to the loop positions in the format "add_start:add_end add_start:add_end ...". and it corresponds to the number of residue to be kept at the N and C-terminus of the loop, respectively
     - `<number_of_models>` specifies how many models to generate with MODELLER.
     - Replace `<pdb_file>` with the path to your input PDB file. 
     - `<protein_chain>` is an optional parameter to specify the chain of the protein (default is chain A).
