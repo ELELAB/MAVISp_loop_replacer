@@ -29,11 +29,12 @@ so we just keep the first and last 3 residues of the loop. It should be noted th
 ## Usage
 
   1. Running the Script
-    - Execute the following command to generate the needed alignment file from the parsed fasta file and the loop set up for MODELLER and initiate the modeling process:
-     
-     ```
-     loop_replacer -f <fasta_file> -u <uniprot_id> -l <loop_positions> -r <residue_adjustments> -m <number_of_models> -p <pdb_file> (--chain <protein_chain>) > final_create_model.log
-     ```
+    - Execute the following command to generate the needed alignment file from the parsed fasta file and the loop set up for MODELLER and initiate the modeling process:  
+
+```
+loop_replacer -f <fasta_file> -u <uniprot_id> -l <loop_positions> -r <residue_adjustments> -m <number_of_models> -p <pdb_file> (--chain <protein_chain>) > final_create_model.log
+```
+
     - Replace `<fasta_file>` with the path to your input FASTA file.
     - Replace `<uniprot_id>` with the uniprot id of the protein.
     - `<loop_positions>` should be specified in the format "start:end start:end ...", and it corresponds to the start and end positions of the loop to be replaced.
