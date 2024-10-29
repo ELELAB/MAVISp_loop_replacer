@@ -51,6 +51,7 @@ loop_replacer -f <fasta_file> -u <uniprot_id> -l <loop_positions> -r <residue_ad
       - Log file (`final_create_model.log`) where errors, warnings, and a summary of successfully produced models are mentioned.
       - MODELLER Model Evaluation and suggested best predicted model summary.
       - Renumbered model files (`<uniprot_id>.<num>_renum.pdb`).
+      - Remember that in the cancermuts step of MAVISp when we generate the mutlist we should define the range as two separate domains
 
 Example
 -------
