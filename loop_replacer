@@ -34,20 +34,30 @@ class TrimmedLoopModel(AutoModel):
     def select_atoms(self):
         # Initialize an empty list to collect the selected residues
         selected_residues = []
-
+        total_trimmed = 0
+        
         # Define the loop_position dictionary (this should be provided)
         # Iterate over each position and residue range in loop_position
         for position, residue in self.loop_definition.items():
-            start, end = position.split(":")
-            add_start, add_end = residue.split(":")
-            start_position = int(start) + int(add_start)
-            end_position = int(end) - int(add_end) - 1
-
-            # Create a range from start_position to end_position
-            for i in range(start_position, end_position + 1):
+            start, end = map(int, position.split(":"))
+            add_start, add_end = map(int, residue.split(":"))
+            trimmed_start = start + add_start
+            trimmed_end = end - add_end - 1
+            trimmed_length = trimmed_end - trimmed_start + 1
+            
+            #Before the trimmed loop
+            for i in range(start, start + add_start):
+                new_index = i - total_trimmed
+                #Append each residue to the list
+                selected_residues.append(self.residues[f'{new_index}:A'])
+            
+            #After the trimmed loop
+            for i in range(end - add_end, end + 1):
+                new_index = i - total_trimmed - trimmed_length
                 # Append each residue to the list
-                selected_residues.append(self.residues['{}:A'.format(i)])
+                selected_residues.append(self.residues[f'{new_index}:A'])
 
+            total_trimmed += trimmed_length
         # Unpack the list of residues and pass them to the selection function
         return Selection(*selected_residues)
 
