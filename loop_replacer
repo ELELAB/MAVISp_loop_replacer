@@ -37,12 +37,14 @@ class TrimmedLoopModel(AutoModel):
 
         # Define the loop_position dictionary (this should be provided)
         # Iterate over each position and residue range in loop_position
+        loop_length = 0
         for position, residue in self.loop_definition.items():
             start, end = position.split(":")
             add_start, add_end = residue.split(":")
-            start_position = int(start) + int(add_start)
-            end_position = int(end) - int(add_end) - 1
-
+            start_position = int(start) - loop_length
+            end_position = start_position + (int(add_start) + int(add_end))+2
+            loop_length = loop_length + (int(end) - start_position) - ((int(add_start) + int(add_end))+1)
+            
             # Create a range from start_position to end_position
             for i in range(start_position, end_position + 1):
                 # Append each residue to the list
