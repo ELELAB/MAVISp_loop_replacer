@@ -41,6 +41,7 @@ class TrimmedLoopModel(AutoModel):
         
         # Define the loop_position dictionary (this should be provided)
         # Iterate over each position and residue range in loop_position
+
         for position, residue in sorted_loops:
             start, end = map(int, position.split(":"))
             add_start, add_end = map(int, residue.split(":"))
