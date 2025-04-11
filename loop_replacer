@@ -34,23 +34,47 @@ class TrimmedLoopModel(AutoModel):
     def select_atoms(self):
         # Initialize an empty list to collect the selected residues
         selected_residues = []
-
+        total_trimmed = 0
+        
+        # Sort loop_definition items
+        sorted_loops = sorted(self.loop_definition.items(), key=lambda x: int(x[0].split(":")[0]))
+        
         # Define the loop_position dictionary (this should be provided)
         # Iterate over each position and residue range in loop_position
-        loop_length = 0
-        for position, residue in self.loop_definition.items():
-            start, end = position.split(":")
-            add_start, add_end = residue.split(":")
-            start_position = int(start) - loop_length
-            end_position = start_position + (int(add_start) + int(add_end))+2
-            loop_length = loop_length + (int(end) - start_position) - ((int(add_start) + int(add_end))+1)
-            
-            # Create a range from start_position to end_position
-            for i in range(start_position, end_position + 1):
-                # Append each residue to the list
-                selected_residues.append(self.residues['{}:A'.format(i)])
 
+        for position, residue in sorted_loops:
+            start, end = map(int, position.split(":"))
+            add_start, add_end = map(int, residue.split(":"))
+            trimmed_start = start + add_start + 1
+            trimmed_end = end - add_end - 1
+            trimmed_length = trimmed_end - trimmed_start + 1
+            
+            print(f"\nProcessing loop from {start} to {end}")
+            print(f"Trimming {add_start} residues from start and {add_end} from end")
+            print(f"Trimmed region is from {trimmed_start} to {trimmed_end} (length {trimmed_length})")
+            print(f"Total trimmed before this loop: {total_trimmed}")
+
+            #Before the trimmed loop
+            print("Selecting residues before trimmed loop:")
+            for i in range(start + 1, start + add_start + 1):
+                new_index = i - total_trimmed
+                #Append each residue to the list
+                print(f"  Selecting residue {new_index}:A (original index {i})")
+                selected_residues.append(self.residues[f'{new_index}:A'])
+            
+            #After the trimmed loop
+            print("Selecting residues after trimmed loop:")
+            for i in range(end - add_end, end):
+                new_index = i - total_trimmed - trimmed_length
+                print(f"  Selecting residue {new_index}:A (original index {i})")
+                # Append each residue to the list
+                selected_residues.append(self.residues[f'{new_index}:A'])
+            total_trimmed += trimmed_length
+            print(f"Updated total_trimmed: {total_trimmed}")
+        
         # Unpack the list of residues and pass them to the selection function
+        print(f"\nFinal selected residue count: {len(selected_residues)}")
+        print(f"Residues: {[str(r) for r in selected_residues]}")
         return Selection(*selected_residues)
 
 def main():

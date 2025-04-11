@@ -37,8 +37,8 @@ loop_replacer -f <fasta_file> -u <uniprot_id> -l <loop_positions> -r <residue_ad
 
     - Replace `<fasta_file>` with the path to your input FASTA file.
     - Replace `<uniprot_id>` with the uniprot id of the protein.
-    - `<loop_positions>` should be specified in the format "start:end start:end ...", and it corresponds to the start and end positions of the loop to be replaced.
-    - `<residue_adjustments>` should correspond to the loop positions in the format "add_start:add_end add_start:add_end ...". and it corresponds to the number of residue to be kept at the N and C-terminus of the loop, respectively
+    - `<loop_positions>` should be specified in the format "start:end start:end ...". Notice that start and end should be the residue numbers in the original structure *before* and *after* the loop, respectively. So the loops start and ends right after and before the numbers given in input.
+    - `<residue_adjustments>` should correspond to the loop positions in the format "add_start:add_end add_start:add_end ...". and it corresponds to the number of residue to be kept at the N and C-terminus of the loop, respectively. These are also the only residues that will be remodeled.
     - `<number_of_models>` specifies how many models to generate with MODELLER.
     - Replace `<pdb_file>` with the path to your input PDB file. 
     - `<protein_chain>` is an optional parameter to specify the chain of the protein (default is chain A).
