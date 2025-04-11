@@ -23,7 +23,7 @@
 Kind, OS, HostName, Kernel, Processor: 4, Linux kb-bioinfo01 5.15.0-94-generic x86_64
 Date and time of compilation         : 2024/01/20 00:40:16
 MODELLER executable type             : x86_64-intel8
-Job starting time (YY/MM/DD HH:MM:SS): 2024/07/19 14:36:11
+Job starting time (YY/MM/DD HH:MM:SS): 2025/04/11 14:34:48
 
 openf___224_> Open           $(LIB)/restyp.lib
 openf___224_> Open           ${MODINSTALL10v5}/modlib/resgrp.lib
@@ -51,6 +51,7 @@ openf___224_> Open           ${MODINSTALL10v5}/modlib/mnch2.lib
 openf___224_> Open           ${MODINSTALL10v5}/modlib/mnch3.lib
 openf___224_> Open           ${MODINSTALL10v5}/modlib/xs4.mat
 rdrrwgh_268_> Number of residue types:       21
+runcmd_____W>: creation of new member 'loop_definition' in <Model containing 0 chains, 0 residues, and 0 atoms>: possible typo!
 openf___224_> Open           Q9UPY3.ali
 
 Dynamically allocated memory at   amaxalignment [B,KiB,MiB]:       265959     259.726     0.254
@@ -414,243 +415,323 @@ rdcsr2__307_> Number of restraints read    :   149908
 rdcsrs__304_> Restraints in memory, selected restraints:   149908   149908
               Explicitly excluded atom pairs in memory :        0
               Pseudo atoms in memory                   :        0
+
+Processing loop from 1100 to 1288
+Trimming 6 residues from start and 5 from end
+Trimmed region is from 1107 to 1282 (length 176)
+Total trimmed before this loop: 0
+Selecting residues before trimmed loop:
+  Selecting residue 1101:A (original index 1101)
+  Selecting residue 1102:A (original index 1102)
+  Selecting residue 1103:A (original index 1103)
+  Selecting residue 1104:A (original index 1104)
+  Selecting residue 1105:A (original index 1105)
+  Selecting residue 1106:A (original index 1106)
+Selecting residues after trimmed loop:
+  Selecting residue 1107:A (original index 1283)
+  Selecting residue 1108:A (original index 1284)
+  Selecting residue 1109:A (original index 1285)
+  Selecting residue 1110:A (original index 1286)
+  Selecting residue 1111:A (original index 1287)
+Updated total_trimmed: 176
+
+Processing loop from 1389 to 1546
+Trimming 4 residues from start and 5 from end
+Trimmed region is from 1394 to 1540 (length 147)
+Total trimmed before this loop: 176
+Selecting residues before trimmed loop:
+  Selecting residue 1214:A (original index 1390)
+  Selecting residue 1215:A (original index 1391)
+  Selecting residue 1216:A (original index 1392)
+  Selecting residue 1217:A (original index 1393)
+Selecting residues after trimmed loop:
+  Selecting residue 1218:A (original index 1541)
+  Selecting residue 1219:A (original index 1542)
+  Selecting residue 1220:A (original index 1543)
+  Selecting residue 1221:A (original index 1544)
+  Selecting residue 1222:A (original index 1545)
+Updated total_trimmed: 323
+
+Final selected residue count: 20
+Residues: ['<Residue 1101:A (type SER)>', '<Residue 1102:A (type ILE)>', '<Residue 1103:A (type ASP)>', '<Residue 1104:A (type SER)>', '<Residue 1105:A (type LYS)>', '<Residue 1106:A (type SER)>', '<Residue 1107:A (type ILE)>', '<Residue 1108:A (type GLY)>', '<Residue 1109:A (type TYR)>', '<Residue 1110:A (type SER)>', '<Residue 1111:A (type SER)>', '<Residue 1214:A (type ASP)>', '<Residue 1215:A (type LYS)>', '<Residue 1216:A (type SER)>', '<Residue 1217:A (type ASN)>', '<Residue 1218:A (type LYS)>', '<Residue 1219:A (type GLN)>', '<Residue 1220:A (type SER)>', '<Residue 1221:A (type ILE)>', '<Residue 1222:A (type SER)>']
+148 (of 12823 total) atoms selected for optimization
 openf___224_> Open           Q9UPY3_cut.ini
 
 Dynamically allocated memory at       amaxmodel [B,KiB,MiB]:     27925685   27271.176    26.632
 read_mo_297_> Segments, residues, atoms:        1     1599    12823
 read_mo_298_> Segment:        1  1:A  1599:A    12823
-randomi_498_> Atoms,selected atoms,random_seed,amplitude:    12823    12823        1        4.0000
+randomi_498_> Atoms,selected atoms,random_seed,amplitude:    12823      148        1        4.0000
 randomi_496_> Amplitude is > 0; randomization is done.
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823    81122
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823    91984
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823    97537
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   103065
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   108477
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   114255
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   121262
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   128581
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   135542
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   140918
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   144002
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   147941
+pick_re_612_> Number of MODEL atoms, selected restraints;      148      945
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1044
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1085
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1111
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1114
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1126
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1131
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1131
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1199
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1235
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1254
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1305
 
 Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     28526009   27857.430    27.205
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   148777
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   148862
-pick_re_612_> Number of MODEL atoms, selected restraints;    12823   149908
-iupac_m_487_> NH1/2 swapped:     -176.3889       45  45
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.6962       47  47
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1305
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1305
+pick_re_612_> Number of MODEL atoms, selected restraints;      148     1305
+iupac_m_486_> OE1/2 will be swapped:     -158.9971       35  35
+iupac_m_483_> CD1/2 CE1/2 swapped:      -99.1098       47  47
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -161.9055       53  53
-iupac_m_485_> OD1/2 will be swapped:      141.0562       57  57
-iupac_m_487_> NH1/2 swapped:     -175.5179       86  86
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.8869       89  89
+iupac_m_486_> OE1/2 will be swapped:     -118.5536       50  50
+iupac_m_486_> OE1/2 will be swapped:     -107.6740       53  53
+iupac_m_483_> CD1/2 CE1/2 swapped:      -92.2212       72  72
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -178.6297      128  128
-iupac_m_486_> OE1/2 will be swapped:      142.7769      136  136
-iupac_m_487_> NH1/2 swapped:     -177.3200      137  137
-iupac_m_486_> OE1/2 will be swapped:      151.2163      176  176
-iupac_m_487_> NH1/2 swapped:      179.0228      187  187
-iupac_m_486_> OE1/2 will be swapped:     -174.3329      188  188
-iupac_m_487_> NH1/2 swapped:      178.5548      201  201
-iupac_m_486_> OE1/2 will be swapped:     -166.7474      217  217
-iupac_m_486_> OE1/2 will be swapped:     -175.9220      220  220
-iupac_m_486_> OE1/2 will be swapped:      104.9356      221  221
-iupac_m_486_> OE1/2 will be swapped:      136.7167      227  227
-iupac_m_486_> OE1/2 will be swapped:     -168.8004      235  235
-iupac_m_486_> OE1/2 will be swapped:     -169.2221      252  252
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.1717      260  260
+iupac_m_486_> OE1/2 will be swapped:      173.5502       80  80
+iupac_m_483_> CD1/2 CE1/2 swapped:     -111.8849       89  89
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -179.6557      263  263
-iupac_m_486_> OE1/2 will be swapped:     -176.5356      275  275
-iupac_m_487_> NH1/2 swapped:     -179.8310      293  293
-iupac_m_487_> NH1/2 swapped:      175.9488      307  307
-iupac_m_486_> OE1/2 will be swapped:     -111.1490      336  336
-iupac_m_486_> OE1/2 will be swapped:      129.9950      338  338
-iupac_m_487_> NH1/2 swapped:      178.8815      342  342
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.7215      351  351
+iupac_m_486_> OE1/2 will be swapped:      158.7863      123  123
+iupac_m_486_> OE1/2 will be swapped:      154.3073      128  128
+iupac_m_486_> OE1/2 will be swapped:     -157.3906      136  136
+iupac_m_486_> OE1/2 will be swapped:      128.5052      141  141
+iupac_m_486_> OE1/2 will be swapped:      162.8554      176  176
+iupac_m_486_> OE1/2 will be swapped:      109.5994      188  188
+iupac_m_486_> OE1/2 will be swapped:      178.8848      217  217
+iupac_m_486_> OE1/2 will be swapped:      165.1469      218  218
+iupac_m_486_> OE1/2 will be swapped:     -159.6578      220  220
+iupac_m_486_> OE1/2 will be swapped:     -173.2859      221  221
+iupac_m_486_> OE1/2 will be swapped:      140.3547      227  227
+iupac_m_486_> OE1/2 will be swapped:      179.5158      235  235
+iupac_m_486_> OE1/2 will be swapped:     -149.8264      252  252
+iupac_m_483_> CD1/2 CE1/2 swapped:      -98.3001      260  260
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      132.5431      382  382
-iupac_m_486_> OE1/2 will be swapped:     -177.8338      391  391
-iupac_m_485_> OD1/2 will be swapped:      168.9109      417  417
-iupac_m_486_> OE1/2 will be swapped:     -150.3335      420  420
-iupac_m_486_> OE1/2 will be swapped:     -125.6667      423  423
-iupac_m_486_> OE1/2 will be swapped:     -100.6256      426  426
-iupac_m_486_> OE1/2 will be swapped:      170.3662      431  431
-iupac_m_486_> OE1/2 will be swapped:      147.5483      449  449
-iupac_m_487_> NH1/2 swapped:      176.7600      450  450
-iupac_m_487_> NH1/2 swapped:      175.5349      459  459
-iupac_m_486_> OE1/2 will be swapped:      154.3911      463  463
-iupac_m_487_> NH1/2 swapped:     -177.7243      490  490
-iupac_m_486_> OE1/2 will be swapped:     -178.3727      495  495
-iupac_m_486_> OE1/2 will be swapped:     -100.0395      497  497
-iupac_m_486_> OE1/2 will be swapped:      178.3183      502  502
-iupac_m_486_> OE1/2 will be swapped:      127.2172      503  503
-iupac_m_487_> NH1/2 swapped:      178.9219      506  506
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.5884      508  508
+iupac_m_486_> OE1/2 will be swapped:      167.1864      268  268
+iupac_m_486_> OE1/2 will be swapped:     -175.2764      273  273
+iupac_m_486_> OE1/2 will be swapped:      178.7717      275  275
+iupac_m_486_> OE1/2 will be swapped:     -177.6825      276  276
+iupac_m_483_> CD1/2 CE1/2 swapped:      -94.8820      280  280
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      179.4290      509  509
-iupac_m_486_> OE1/2 will be swapped:     -175.6631      512  512
-iupac_m_486_> OE1/2 will be swapped:     -161.6245      523  523
-iupac_m_486_> OE1/2 will be swapped:     -171.8279      524  524
-iupac_m_483_> CD1/2 CE1/2 swapped:      -96.6298      543  543
+iupac_m_486_> OE1/2 will be swapped:      149.6038      292  292
+iupac_m_486_> OE1/2 will be swapped:      129.0653      328  328
+iupac_m_486_> OE1/2 will be swapped:      -97.4206      336  336
+iupac_m_486_> OE1/2 will be swapped:      157.1274      338  338
+iupac_m_486_> OE1/2 will be swapped:      155.5725      339  339
+iupac_m_483_> CD1/2 CE1/2 swapped:      -93.0449      351  351
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -94.7428      546  546
+iupac_m_486_> OE1/2 will be swapped:     -155.4233      360  360
+iupac_m_486_> OE1/2 will be swapped:     -172.1963      361  361
+iupac_m_486_> OE1/2 will be swapped:     -160.8404      382  382
+iupac_m_483_> CD1/2 CE1/2 swapped:      -96.5625      387  387
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -178.7126      552  552
-iupac_m_487_> NH1/2 swapped:      179.6461      554  554
-iupac_m_483_> CD1/2 CE1/2 swapped:     -100.8833      560  560
+iupac_m_483_> CD1/2 CE1/2 swapped:      -91.9511      390  390
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -96.2017      572  572
+iupac_m_486_> OE1/2 will be swapped:      173.5247      391  391
+iupac_m_486_> OE1/2 will be swapped:      116.3843      396  396
+iupac_m_486_> OE1/2 will be swapped:      168.2304      399  399
+iupac_m_483_> CD1/2 CE1/2 swapped:     -119.4581      409  409
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -161.6660      574  574
-iupac_m_485_> OD1/2 will be swapped:      123.7374      595  595
-iupac_m_485_> OD1/2 will be swapped:     -178.3454      600  600
-iupac_m_483_> CD1/2 CE1/2 swapped:      -98.5715      614  614
+iupac_m_486_> OE1/2 will be swapped:      174.5046      416  416
+iupac_m_486_> OE1/2 will be swapped:     -158.1118      420  420
+iupac_m_486_> OE1/2 will be swapped:     -148.3155      422  422
+iupac_m_486_> OE1/2 will be swapped:      117.9362      423  423
+iupac_m_486_> OE1/2 will be swapped:     -133.9272      425  425
+iupac_m_486_> OE1/2 will be swapped:      127.8935      426  426
+iupac_m_486_> OE1/2 will be swapped:      113.0556      428  428
+iupac_m_486_> OE1/2 will be swapped:      127.9773      431  431
+iupac_m_486_> OE1/2 will be swapped:     -158.7163      449  449
+iupac_m_486_> OE1/2 will be swapped:      146.3617      463  463
+iupac_m_486_> OE1/2 will be swapped:      166.1803      470  470
+iupac_m_483_> CD1/2 CE1/2 swapped:      -93.7570      478  478
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -98.0492      637  637
+iupac_m_486_> OE1/2 will be swapped:      169.7788      495  495
+iupac_m_486_> OE1/2 will be swapped:      129.2476      497  497
+iupac_m_483_> CD1/2 CE1/2 swapped:      -94.9104      498  498
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -179.7126      640  640
-iupac_m_485_> OD1/2 will be swapped:      121.2570      644  644
-iupac_m_487_> NH1/2 swapped:      179.0552      654  654
-iupac_m_487_> NH1/2 swapped:     -178.6334      656  656
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.1521      668  668
+iupac_m_486_> OE1/2 will be swapped:     -151.9079      502  502
+iupac_m_486_> OE1/2 will be swapped:      144.4484      503  503
+iupac_m_483_> CD1/2 CE1/2 swapped:     -106.4662      508  508
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_484W> Dihedral still outside +-90:       90.1997
-iupac_m_487_> NH1/2 swapped:     -178.5020      688  688
-iupac_m_486_> OE1/2 will be swapped:      173.3366      691  691
-iupac_m_487_> NH1/2 swapped:     -179.0144      692  692
-iupac_m_486_> OE1/2 will be swapped:     -171.9261      700  700
-iupac_m_486_> OE1/2 will be swapped:      157.9013      707  707
-iupac_m_486_> OE1/2 will be swapped:     -160.5156      732  732
-iupac_m_487_> NH1/2 swapped:      178.8832      739  739
-iupac_m_486_> OE1/2 will be swapped:     -172.7485      755  755
-iupac_m_487_> NH1/2 swapped:      179.8022      758  758
-iupac_m_485_> OD1/2 will be swapped:     -178.7443      759  759
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.4544      761  761
+iupac_m_486_> OE1/2 will be swapped:     -132.5018      512  512
+iupac_m_486_> OE1/2 will be swapped:     -164.7128      523  523
+iupac_m_486_> OE1/2 will be swapped:      139.2420      524  524
+iupac_m_486_> OE1/2 will be swapped:     -168.7033      542  542
+iupac_m_483_> CD1/2 CE1/2 swapped:     -106.1712      543  543
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -178.9493      763  763
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.0264      769  769
+iupac_m_483_> CD1/2 CE1/2 swapped:      -98.4496      546  546
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.8608      771  771
+iupac_m_483_> CD1/2 CE1/2 swapped:     -111.3376      560  560
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -171.5708      784  784
-iupac_m_487_> NH1/2 swapped:     -178.8047      788  788
-iupac_m_487_> NH1/2 swapped:     -179.5711      789  789
-iupac_m_483_> CD1/2 CE1/2 swapped:      -91.3106      793  793
+iupac_m_483_> CD1/2 CE1/2 swapped:     -104.3345      572  572
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -131.5878      796  796
-iupac_m_486_> OE1/2 will be swapped:      102.8550      824  824
-iupac_m_483_> CD1/2 CE1/2 swapped:      -91.8889      852  852
+iupac_m_486_> OE1/2 will be swapped:     -179.3028      573  573
+iupac_m_486_> OE1/2 will be swapped:      166.1703      574  574
+iupac_m_486_> OE1/2 will be swapped:      137.0050      583  583
+iupac_m_486_> OE1/2 will be swapped:      122.7829      598  598
+iupac_m_483_> CD1/2 CE1/2 swapped:     -114.2799      614  614
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      178.5956      859  859
-iupac_m_486_> OE1/2 will be swapped:     -111.2924      861  861
-iupac_m_486_> OE1/2 will be swapped:      160.7550      866  866
-iupac_m_483_> CD1/2 CE1/2 swapped:     -102.6893      867  867
+iupac_m_483_> CD1/2 CE1/2 swapped:     -101.8722      637  637
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_485_> OD1/2 will be swapped:      107.1276      891  891
-iupac_m_483_> CD1/2 CE1/2 swapped:       95.3341      896  896
+iupac_m_485_> OD1/2 will be swapped:       97.4435      644  644
+iupac_m_486_> OE1/2 will be swapped:      163.7637      657  657
+iupac_m_483_> CD1/2 CE1/2 swapped:      -99.2334      668  668
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -107.0835      898  898
-iupac_m_486_> OE1/2 will be swapped:      154.9829      901  901
-iupac_m_486_> OE1/2 will be swapped:      161.3447      904  904
-iupac_m_487_> NH1/2 swapped:      176.5126      906  906
-iupac_m_483_> CD1/2 CE1/2 swapped:      -97.0975      920  920
+iupac_m_486_> OE1/2 will be swapped:     -175.7323      691  691
+iupac_m_486_> OE1/2 will be swapped:     -137.3348      700  700
+iupac_m_486_> OE1/2 will be swapped:      130.5899      707  707
+iupac_m_486_> OE1/2 will be swapped:     -125.5526      718  718
+iupac_m_486_> OE1/2 will be swapped:       91.0427      723  723
+iupac_m_486_> OE1/2 will be swapped:      137.9171      724  724
+iupac_m_486_> OE1/2 will be swapped:      140.3151      725  725
+iupac_m_486_> OE1/2 will be swapped:      124.3844      731  731
+iupac_m_486_> OE1/2 will be swapped:      144.8565      732  732
+iupac_m_486_> OE1/2 will be swapped:      157.8033      733  733
+iupac_m_486_> OE1/2 will be swapped:     -144.5554      755  755
+iupac_m_483_> CD1/2 CE1/2 swapped:     -106.5819      761  761
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.2383      922  922
+iupac_m_483_> CD1/2 CE1/2 swapped:      -97.2244      769  769
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_484W> Dihedral still outside +-90:       90.2047
-iupac_m_487_> NH1/2 swapped:     -175.5313      935  935
-iupac_m_485_> OD1/2 will be swapped:      130.8226      940  940
-iupac_m_483_> CD1/2 CE1/2 swapped:     -100.1984      960  960
+iupac_m_483_> CD1/2 CE1/2 swapped:     -101.7318      771  771
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -140.5253      966  966
-iupac_m_486_> OE1/2 will be swapped:      179.8688      970  970
-iupac_m_486_> OE1/2 will be swapped:      169.4188     1018  1018
-iupac_m_486_> OE1/2 will be swapped:      169.2319     1025  1025
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.4575     1059  1059
+iupac_m_486_> OE1/2 will be swapped:     -175.4515      784  784
+iupac_m_483_> CD1/2 CE1/2 swapped:      -92.3453      793  793
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      179.5851     1068  1068
-iupac_m_486_> OE1/2 will be swapped:      175.3755     1069  1069
-iupac_m_487_> NH1/2 swapped:      174.4363     1071  1071
-iupac_m_487_> NH1/2 swapped:     -178.6132     1083  1083
-iupac_m_485_> OD1/2 will be swapped:      150.5480     1088  1088
-iupac_m_483_> CD1/2 CE1/2 swapped:      -93.7808     1089  1089
+iupac_m_486_> OE1/2 will be swapped:     -113.8137      796  796
+iupac_m_483_> CD1/2 CE1/2 swapped:      -97.9478      816  816
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -173.3783     1090  1090
-iupac_m_486_> OE1/2 will be swapped:      171.7685     1137  1137
-iupac_m_483_> CD1/2 CE1/2 swapped:      -96.4691     1146  1146
+iupac_m_486_> OE1/2 will be swapped:       96.0514      824  824
+iupac_m_486_> OE1/2 will be swapped:      150.6037      830  830
+iupac_m_486_> OE1/2 will be swapped:     -147.2885      844  844
+iupac_m_483_> CD1/2 CE1/2 swapped:     -103.1665      852  852
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.3454     1154  1154
+iupac_m_486_> OE1/2 will be swapped:     -119.1852      861  861
+iupac_m_486_> OE1/2 will be swapped:     -178.1834      866  866
+iupac_m_483_> CD1/2 CE1/2 swapped:     -111.4081      867  867
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_485_> OD1/2 will be swapped:      132.9635     1161  1161
-iupac_m_487_> NH1/2 swapped:      178.8828     1166  1166
-iupac_m_483_> CD1/2 CE1/2 swapped:      -94.6850     1169  1169
+iupac_m_483_> CD1/2 CE1/2 swapped:      -92.8762      876  876
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      179.7643     1182  1182
-iupac_m_487_> NH1/2 swapped:      178.9192     1192  1192
-iupac_m_483_> CD1/2 CE1/2 swapped:     -104.8596     1198  1198
+iupac_m_483_> CD1/2 CE1/2 swapped:     -114.3343      896  896
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.6854     1209  1209
+iupac_m_486_> OE1/2 will be swapped:     -132.8789      898  898
+iupac_m_486_> OE1/2 will be swapped:      -92.6565      901  901
+iupac_m_484W> Dihedral still outside +-90:       90.5075
+iupac_m_486_> OE1/2 will be swapped:     -163.3188      904  904
+iupac_m_486_> OE1/2 will be swapped:     -164.6219      917  917
+iupac_m_483_> CD1/2 CE1/2 swapped:     -105.4970      920  920
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:     -169.8502     1241  1241
-iupac_m_486_> OE1/2 will be swapped:      136.8761     1253  1253
-iupac_m_483_> CD1/2 CE1/2 swapped:     -100.4015     1259  1259
+iupac_m_483_> CD1/2 CE1/2 swapped:      -96.9564      922  922
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      177.8184     1273  1273
-iupac_m_487_> NH1/2 swapped:      173.7590     1276  1276
-iupac_m_486_> OE1/2 will be swapped:      179.8002     1277  1277
-iupac_m_487_> NH1/2 swapped:      176.1409     1324  1324
-iupac_m_485_> OD1/2 will be swapped:     -176.6898     1328  1328
-iupac_m_483_> CD1/2 CE1/2 swapped:      -94.6001     1346  1346
+iupac_m_486_> OE1/2 will be swapped:     -132.3936      925  925
+iupac_m_483_> CD1/2 CE1/2 swapped:      -95.3514      936  936
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:       95.5094     1347  1347
-iupac_m_483_> CD1/2 CE1/2 swapped:      -90.6229     1352  1352
+iupac_m_483_> CD1/2 CE1/2 swapped:      -90.6962      945  945
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:     -176.9559     1353  1353
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.7342     1354  1354
+iupac_m_483_> CD1/2 CE1/2 swapped:     -110.4319      960  960
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -91.0213     1364  1364
+iupac_m_486_> OE1/2 will be swapped:      135.7696      964  964
+iupac_m_483_> CD1/2 CE1/2 swapped:      -91.6904      965  965
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -98.5733     1369  1369
+iupac_m_486_> OE1/2 will be swapped:     -149.8024      966  966
+iupac_m_486_> OE1/2 will be swapped:     -146.9024      970  970
+iupac_m_483_> CD1/2 CE1/2 swapped:      -94.7361      971  971
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.6327     1383  1383
+iupac_m_486_> OE1/2 will be swapped:      133.4391     1018  1018
+iupac_m_486_> OE1/2 will be swapped:     -174.5685     1025  1025
+iupac_m_486_> OE1/2 will be swapped:     -175.1055     1036  1036
+iupac_m_483_> CD1/2 CE1/2 swapped:      -97.6377     1059  1059
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:     -107.0474     1391  1391
+iupac_m_486_> OE1/2 will be swapped:     -157.5656     1068  1068
+iupac_m_486_> OE1/2 will be swapped:     -172.3744     1069  1069
+iupac_m_483_> CD1/2 CE1/2 swapped:      -97.3431     1089  1089
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      178.3694     1402  1402
-iupac_m_483_> CD1/2 CE1/2 swapped:     -108.0207     1435  1435
+iupac_m_485_> OD1/2 will be swapped:      172.3212     1103  1103
+iupac_m_483_> CD1/2 CE1/2 swapped:       97.4412     1109  1109
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      107.0739     1441  1441
-iupac_m_483_> CD1/2 CE1/2 swapped:      -98.1191     1449  1449
+iupac_m_483_> CD1/2 CE1/2 swapped:      -92.7976     1134  1134
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -92.9190     1452  1452
+iupac_m_486_> OE1/2 will be swapped:      176.2691     1137  1137
+iupac_m_486_> OE1/2 will be swapped:      145.0475     1140  1140
+iupac_m_483_> CD1/2 CE1/2 swapped:     -101.2544     1146  1146
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      168.7599     1465  1465
-iupac_m_487_> NH1/2 swapped:     -177.3543     1467  1467
-iupac_m_487_> NH1/2 swapped:      175.9829     1468  1468
-iupac_m_486_> OE1/2 will be swapped:     -155.4284     1473  1473
-iupac_m_486_> OE1/2 will be swapped:     -155.8845     1474  1474
-iupac_m_486_> OE1/2 will be swapped:     -119.1189     1477  1477
-iupac_m_486_> OE1/2 will be swapped:     -115.2178     1480  1480
-iupac_m_483_> CD1/2 CE1/2 swapped:      -94.8525     1489  1489
+iupac_m_483_> CD1/2 CE1/2 swapped:      -95.5911     1154  1154
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      173.3952     1490  1490
-iupac_m_483_> CD1/2 CE1/2 swapped:      -95.3894     1497  1497
+iupac_m_486_> OE1/2 will be swapped:      123.8997     1164  1164
+iupac_m_483_> CD1/2 CE1/2 swapped:     -106.2776     1169  1169
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      114.4608     1505  1505
-iupac_m_483_> CD1/2 CE1/2 swapped:      -93.7584     1511  1511
+iupac_m_483_> CD1/2 CE1/2 swapped:      -97.9749     1181  1181
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_483_> CD1/2 CE1/2 swapped:      -93.1740     1512  1512
+iupac_m_483_> CD1/2 CE1/2 swapped:     -120.9619     1198  1198
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_486_> OE1/2 will be swapped:      162.7139     1536  1536
-iupac_m_486_> OE1/2 will be swapped:      106.0313     1538  1538
-iupac_m_486_> OE1/2 will be swapped:       93.0423     1540  1540
-iupac_m_487_> NH1/2 swapped:      177.3795     1556  1556
-iupac_m_483_> CD1/2 CE1/2 swapped:      -91.2504     1574  1574
+iupac_m_483_> CD1/2 CE1/2 swapped:     -101.6783     1209  1209
 iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
-iupac_m_487_> NH1/2 swapped:      178.5226     1575  1575
-iupac_m_487_> NH1/2 swapped:      173.1339     1583  1583
+iupac_m_483_> CD1/2 CE1/2 swapped:      -94.5808     1223  1223
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      151.7304     1228  1228
+iupac_m_486_> OE1/2 will be swapped:      124.9904     1241  1241
+iupac_m_486_> OE1/2 will be swapped:     -164.7284     1253  1253
+iupac_m_483_> CD1/2 CE1/2 swapped:     -117.2924     1259  1259
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      146.7406     1277  1277
+iupac_m_486_> OE1/2 will be swapped:      140.0006     1285  1285
+iupac_m_486_> OE1/2 will be swapped:      139.0856     1315  1315
+iupac_m_483_> CD1/2 CE1/2 swapped:     -105.9252     1343  1343
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:     -143.1615     1344  1344
+iupac_m_483_> CD1/2 CE1/2 swapped:     -103.5810     1346  1346
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      110.6916     1347  1347
+iupac_m_483_> CD1/2 CE1/2 swapped:      -96.3108     1352  1352
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:      -99.6825     1354  1354
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:      -90.9785     1364  1364
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:      -98.1791     1369  1369
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:     -115.0206     1378  1378
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      149.3034     1382  1382
+iupac_m_483_> CD1/2 CE1/2 swapped:     -101.7806     1383  1383
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:     -129.1222     1391  1391
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:     -173.8452     1399  1399
+iupac_m_483_> CD1/2 CE1/2 swapped:     -130.2462     1435  1435
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:     -167.4116     1441  1441
+iupac_m_483_> CD1/2 CE1/2 swapped:     -104.8168     1449  1449
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:     -113.2630     1452  1452
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      163.4742     1455  1455
+iupac_m_486_> OE1/2 will be swapped:      142.8506     1458  1458
+iupac_m_486_> OE1/2 will be swapped:      151.5512     1465  1465
+iupac_m_486_> OE1/2 will be swapped:      141.3715     1470  1470
+iupac_m_486_> OE1/2 will be swapped:      170.1750     1471  1471
+iupac_m_486_> OE1/2 will be swapped:      152.3569     1473  1473
+iupac_m_486_> OE1/2 will be swapped:      151.9110     1474  1474
+iupac_m_486_> OE1/2 will be swapped:     -167.5481     1476  1476
+iupac_m_486_> OE1/2 will be swapped:      141.5296     1477  1477
+iupac_m_486_> OE1/2 will be swapped:      -93.6171     1480  1480
+iupac_m_483_> CD1/2 CE1/2 swapped:      -95.7067     1489  1489
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      172.0379     1490  1490
+iupac_m_483_> CD1/2 CE1/2 swapped:     -110.5818     1497  1497
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:     -150.6678     1505  1505
+iupac_m_483_> CD1/2 CE1/2 swapped:     -108.7145     1511  1511
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_483_> CD1/2 CE1/2 swapped:     -112.1417     1512  1512
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:      153.5269     1520  1520
+iupac_m_486_> OE1/2 will be swapped:     -143.4621     1533  1533
+iupac_m_486_> OE1/2 will be swapped:      172.4596     1536  1536
+iupac_m_486_> OE1/2 will be swapped:      148.5845     1538  1538
+iupac_m_486_> OE1/2 will be swapped:      167.3925     1540  1540
+iupac_m_483_> CD1/2 CE1/2 swapped:      -91.9755     1544  1544
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
+iupac_m_486_> OE1/2 will be swapped:     -136.4106     1548  1548
+iupac_m_486_> OE1/2 will be swapped:     -146.3003     1560  1560
+iupac_m_483_> CD1/2 CE1/2 swapped:     -118.3057     1574  1574
+iupac_m_397W> Atoms were not swapped because of the uncertainty of how to handle the H atom.
 openf___224_> Open           ${LIB}/atmcls-mf.lib
 
 Dynamically allocated memory at amaxgroup_restr [B,KiB,MiB]:     28526437   27857.848    27.205
@@ -842,28 +923,16 @@ read_pa_232_> parameters    BONDS   ANGLS  DIHEDS IMPROPS    MODE
 >> Model assessment by DOPE potential
 iatmcls_286W> MODEL atom not classified:  SER:OXT  SER
 
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     33964679   33168.633    32.391
-
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     34580183   33769.711    32.978
-
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     35811191   34971.867    34.152
-
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     38273207   37376.180    36.500
-
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     43197239   42184.805    41.196
-
-Dynamically allocated memory at  amaxrestraints [B,KiB,MiB]:     53045303   51802.055    50.588
-
 
 >> ENERGY; Differences between the model's features and restraints:
 Number of all residues in MODEL                   :     1599
-Number of all, selected real atoms                :    12823   12823
+Number of all, selected real atoms                :    12823     148
 Number of all, selected pseudo atoms              :        0       0
-Number of all static, selected restraints         :   149908  149908
+Number of all static, selected restraints         :   149908    1305
 COVALENT_CYS                                      :        F
 NONBONDED_SEL_ATOMS                               :        1
-Number of non-bonded pairs (excluding 1-2,1-3,1-4):  2444603
-Dynamic pairs routine                             : 1, NATM x NATM double loop
+Number of non-bonded pairs (excluding 1-2,1-3,1-4):    29080
+Dynamic pairs routine                             : 5, NATM_SEL x NATM double loop
 Atomic shift for contacts update (UPDATE_DYNAMIC) :    0.390
 LENNARD_JONES_SWITCH                              :    6.500   7.500
 COULOMB_JONES_SWITCH                              :    6.500   7.500
@@ -873,13 +942,13 @@ CONTACT_SHELL                                     :   15.000
 DYNAMIC_PAIRS,_SPHERE,_COULOMB,_LENNARD,_MODELLER :        T       F       F       F       T
 SPHERE_STDV                                       :    0.050
 RADII_FACTOR                                      :    0.820
-Current energy                                    :     -184521.5938
+Current energy                                    :        -913.1449
 
 
 
 
 << end of ENERGY.
-DOPE score               : -184521.593750
+DOPE score               :  -913.144897
 >> Model assessment by GA341 potential
 
 Surface library          : /usr/lib/modeller10.5/modlib/surf5.de
@@ -887,26 +956,26 @@ Pair library             : /usr/lib/modeller10.5/modlib/pair9.de
 Chain identifier         : _
 % sequence identity      :   100.000000
 Sequence length          :         1599
-Compactness              :     0.093350
-Native energy (pair)     : -2086.772213
-Native energy (surface)  :   -90.821936
-Native energy (combined) :   -27.910752
-Z score (pair)           :   -22.667950
-Z score (surface)        :   -15.895005
-Z score (combined)       :   -28.561568
+Compactness              :     0.090590
+Native energy (pair)     : -2208.014670
+Native energy (surface)  :   -95.722811
+Native energy (combined) :   -30.653140
+Z score (pair)           :   -23.810057
+Z score (surface)        :   -16.783289
+Z score (combined)       :   -30.477998
 GA341 score              :     1.000000
 
 
 
 >> ENERGY; Differences between the model's features and restraints:
 Number of all residues in MODEL                   :     1599
-Number of all, selected real atoms                :    12823   12823
+Number of all, selected real atoms                :    12823     148
 Number of all, selected pseudo atoms              :        0       0
-Number of all static, selected restraints         :   149908  149908
+Number of all static, selected restraints         :   149908    1305
 COVALENT_CYS                                      :        F
 NONBONDED_SEL_ATOMS                               :        1
-Number of non-bonded pairs (excluding 1-2,1-3,1-4):    24579
-Dynamic pairs routine                             : 2, NATM x NATM cell sorting
+Number of non-bonded pairs (excluding 1-2,1-3,1-4):      255
+Dynamic pairs routine                             : 5, NATM_SEL x NATM double loop
 Atomic shift for contacts update (UPDATE_DYNAMIC) :    0.390
 LENNARD_JONES_SWITCH                              :    6.500   7.500
 COULOMB_JONES_SWITCH                              :    6.500   7.500
@@ -916,7 +985,7 @@ CONTACT_SHELL                                     :    4.000
 DYNAMIC_PAIRS,_SPHERE,_COULOMB,_LENNARD,_MODELLER :        T       T       F       F       F
 SPHERE_STDV                                       :    0.050
 RADII_FACTOR                                      :    0.820
-Current energy                                    :       11130.9688
+Current energy                                    :        3991.7690
 
 
 
@@ -934,32 +1003,32 @@ Summary of the restraint violations:
 
  #                     RESTRAINT_GROUP      NUM   NUMVI  NUMVP   RMS_1   RMS_2         MOL.PDF     S_i
 ------------------------------------------------------------------------------------------------------
- 1 Bond length potential              :   13110       6      7   0.008   0.008      258.41       1.000
- 2 Bond angle potential               :   17763       4     41   2.093   2.093      1529.9       1.000
- 3 Stereochemical cosine torsion poten:    8350       0    201  47.203  47.203      2844.1       1.000
- 4 Stereochemical improper torsion pot:    5340       0      0   1.156   1.156      156.76       1.000
- 5 Soft-sphere overlap restraints     :   24579       0      0   0.001   0.001      4.1948       1.000
+ 1 Bond length potential              :     151      11     26   0.099   0.099      434.18       1.000
+ 2 Bond angle potential               :     204      11     28   7.745   7.745      259.20       1.000
+ 3 Stereochemical cosine torsion poten:      83       0      9  56.960  56.960      42.286       1.000
+ 4 Stereochemical improper torsion pot:      58       0      0   2.065   2.065      5.8929       1.000
+ 5 Soft-sphere overlap restraints     :     255       1      1   0.019   0.019      10.968       1.000
  6 Lennard-Jones 6-12 potential       :       0       0      0   0.000   0.000      0.0000       1.000
  7 Coulomb point-point electrostatic p:       0       0      0   0.000   0.000      0.0000       1.000
  8 H-bonding potential                :       0       0      0   0.000   0.000      0.0000       1.000
- 9 Distance restraints 1 (CA-CA)      :   30416      40     88   0.288   0.288      2325.6       1.000
-10 Distance restraints 2 (N-O)        :   29767       5     27   0.226   0.226      1195.5       1.000
+ 9 Distance restraints 1 (CA-CA)      :     237      55     81   3.614   3.614      2566.9       1.000
+10 Distance restraints 2 (N-O)        :     173      14     36   2.301   2.301      441.82       1.000
 11 Mainchain Phi dihedral restraints  :       0       0      0   0.000   0.000      0.0000       1.000
 12 Mainchain Psi dihedral restraints  :       0       0      0   0.000   0.000      0.0000       1.000
-13 Mainchain Omega dihedral restraints:    1598       6     14  11.560  11.560      288.42       1.000
-14 Sidechain Chi_1 dihedral restraints:    1440       0      3  50.489  50.489      38.344       1.000
-15 Sidechain Chi_2 dihedral restraints:    1107       0      4  56.958  56.958      213.46       1.000
-16 Sidechain Chi_3 dihedral restraints:     503       0      1  56.628  56.628      278.06       1.000
-17 Sidechain Chi_4 dihedral restraints:     202       0      0  87.000  87.000      130.21       1.000
+13 Mainchain Omega dihedral restraints:      22       2      3  11.137  11.137      32.177       1.000
+14 Sidechain Chi_1 dihedral restraints:      19       0      2  73.020  73.020      6.5178       1.000
+15 Sidechain Chi_2 dihedral restraints:      11       0      0  74.744  74.744      4.3907       1.000
+16 Sidechain Chi_3 dihedral restraints:       4       0      0  63.374  63.374      2.0540       1.000
+17 Sidechain Chi_4 dihedral restraints:       3       0      0  50.875  50.875      1.7682       1.000
 18 Disulfide distance restraints      :       0       0      0   0.000   0.000      0.0000       1.000
 19 Disulfide angle restraints         :       0       0      0   0.000   0.000      0.0000       1.000
 20 Disulfide dihedral angle restraints:       0       0      0   0.000   0.000      0.0000       1.000
 21 Lower bound distance restraints    :       0       0      0   0.000   0.000      0.0000       1.000
 22 Upper bound distance restraints    :       0       0      0   0.000   0.000      0.0000       1.000
-23 Distance restraints 3 (SDCH-MNCH)  :   24245       0      0   0.407   0.407      698.35       1.000
+23 Distance restraints 3 (SDCH-MNCH)  :     300       0      0   1.175   1.175      20.335       1.000
 24 Sidechain Chi_5 dihedral restraints:       0       0      0   0.000   0.000      0.0000       1.000
-25 Phi/Psi pair of dihedral restraints:    1597      29     81  21.410  31.759     -222.24       1.000
-26 Distance restraints 4 (SDCH-SDCH)  :   14470       2     24   0.819   0.819      1391.9       1.000
+25 Phi/Psi pair of dihedral restraints:      24       7     13  49.340  93.048      67.629       1.000
+26 Distance restraints 4 (SDCH-SDCH)  :      16       5      5   6.769   6.769      95.654       1.000
 27 Distance restraints 5 (X-Y)        :       0       0      0   0.000   0.000      0.0000       1.000
 28 NMR distance restraints 6 (X-Y)    :       0       0      0   0.000   0.000      0.0000       1.000
 29 NMR distance restraints 7 (X-Y)    :       0       0      0   0.000   0.000      0.0000       1.000
@@ -980,7 +1049,7 @@ openf___224_> Open           Q9UPY3_cut.V99990001
 # Heavy relative violation of each residue is written to: Q9UPY3_cut.V99990001
 # The profile is NOT normalized by the number of restraints.
 # The profiles are smoothed over a window of residues:    1
-# The sum of all numbers in the file:  141073.9375
+# The sum of all numbers in the file:    5545.3306
 
 
 
@@ -1007,12 +1076,17 @@ Feature  1                           : Bond length potential
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1   91031105K1105K C   CA   8900 8894    1.78    1.49    0.29    8.35    1.49    0.29    8.35
-    2   91041105K1106S C   N    8900 8902    1.52    1.35    0.18    6.26    1.35    0.18    6.26
-    3   91071106S1106S N   CA   8902 8903    1.66    1.43    0.23    7.46    1.43    0.23    7.46
-    4   91091106S1106S C   CA   8906 8903    1.79    1.49    0.30    8.73    1.49    0.30    8.73
-    5   91101106S1107I C   N    8906 8908    1.55    1.35    0.21    7.44    1.35    0.21    7.44
-    6   91151107I1107I N   CA   8908 8909    1.69    1.43    0.26    8.49    1.43    0.26    8.49
+    1   90941104S1104S C   CA   8891 8888    1.65    1.49    0.16    4.51    1.49    0.16    4.51
+    2   91011105K1105K N   CA   8893 8894    1.59    1.43    0.16    5.21    1.43    0.16    5.21
+    3   91031105K1105K C   CA   8900 8894    1.98    1.49    0.49   14.21    1.49    0.49   14.21
+    4   91041105K1106S C   N    8900 8902    1.65    1.35    0.31   10.90    1.35    0.31   10.90
+    5   91071106S1106S N   CA   8902 8903    1.82    1.43    0.39   12.99    1.43    0.39   12.99
+    6   91091106S1106S C   CA   8906 8903    2.03    1.49    0.54   15.64    1.49    0.54   15.64
+    7   91101106S1107I C   N    8906 8908    1.72    1.35    0.37   13.18    1.35    0.37   13.18
+    8   91151107I1107I N   CA   8908 8909    1.88    1.43    0.45   14.72    1.43    0.45   14.72
+    9   91171107I1107I C   CA   8914 8909    1.72    1.49    0.23    6.74    1.49    0.23    6.74
+   10   91181107I1108G C   N    8914 8916    1.47    1.35    0.13    4.56    1.35    0.13    4.56
+   11   91191108G1108G N   CA   8916 8917    1.59    1.43    0.16    5.10    1.43    0.16    5.10
 
 -------------------------------------------------------------------------------------------------
 
@@ -1020,10 +1094,16 @@ Feature  2                           : Bond angle potential
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1  254521105K1105K N   CA   8893 8894  128.58  107.00   21.58    6.20  107.00   21.58    6.20
-    2  254551105K1105K CA  C    8894 8900  136.39  116.50   19.89    5.72  116.50   19.89    5.72
-    3  254631106S1106S N   CA   8902 8903  132.41  107.00   25.41    7.31  107.00   25.41    7.31
-    4  254681106S1107I C   N    8906 8908  144.81  120.00   24.81    5.64  120.00   24.81    5.64
+    1  254301102I1103D C   N    8877 8879  145.81  120.00   25.81    5.86  120.00   25.81    5.86
+    2  254331103D1103D N   CA   8879 8880  129.15  107.00   22.15    6.37  107.00   22.15    6.37
+    3  254441104S1104S N   CA   8887 8888  123.54  107.00   16.54    4.76  107.00   16.54    4.76
+    4  254521105K1105K N   CA   8893 8894  141.98  107.00   34.98   10.06  107.00   34.98   10.06
+    5  254551105K1105K CA  C    8894 8900  145.58  116.50   29.08    8.36  116.50   29.08    8.36
+    6  254601105K1106S C   N    8900 8902  141.06  120.00   21.06    4.79  120.00   21.06    4.79
+    7  254631106S1106S N   CA   8902 8903  141.87  107.00   34.87   10.03  107.00   34.87   10.03
+    8  254661106S1106S CA  C    8903 8906  141.05  116.50   24.55    7.06  116.50   24.55    7.06
+    9  254681106S1107I C   N    8906 8908  151.06  120.00   31.06    7.06  120.00   31.06    7.06
+   10  254811108G1108G N   CA   8916 8917  128.84  107.00   21.84    6.28  107.00   21.84    6.28
 
 -------------------------------------------------------------------------------------------------
 
@@ -1031,29 +1111,47 @@ Feature  9                           : Distance restraints 1 (CA-CA)
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1  66354 782P1105K CA  CA   6263 8894   19.75   13.27    6.48   11.73   13.27    6.48   11.73
-    2  66404 784E1105K CA  CA   6278 8894   22.30   13.16    9.14   15.79   13.16    9.14   15.79
-    3  66434 785L1105K CA  CA   6287 8894   21.25   13.98    7.27   13.46   13.98    7.27   13.46
-    4  712951004H1105K CA  CA   8098 8894   17.94   13.79    4.16    7.59   13.79    4.16    7.59
-    5  713141005L1105K CA  CA   8108 8894   15.45   13.07    2.38    4.69   13.07    2.38    4.69
-    6  714401011A1105K CA  CA   8155 8894   13.66    9.55    4.10    8.74    9.55    4.10    8.74
-    7  714411011A1106S CA  CA   8155 8903   18.19   13.29    4.90    8.81   13.29    4.90    8.81
-    8  714491012L1105K CA  CA   8160 8894   17.27   12.16    5.11    9.41   12.16    5.11    9.41
-    9  714561013P1105K CA  CA   8168 8894   18.74   12.09    6.65   11.15   12.09    6.65   11.15
-   10  714651014L1105K CA  CA   8175 8894   20.98   12.17    8.82   16.79   12.17    8.82   16.79
-   11  724791079G1109Y CA  CA   8687 8921   16.73   12.82    3.91    5.27   12.82    3.91    5.27
-   12  728421107I1316Y CA  CA   890910517   22.58   13.40    9.18   16.66   13.40    9.18   16.66
-   13  728431107I1317G CA  CA   890910529   21.37   11.30   10.07   19.94   11.30   10.07   19.94
-   14  728441107I1318C CA  CA   890910533   19.68    9.89    9.79   18.81    9.89    9.79   18.81
-   15  728451107I1319L CA  CA   890910539   22.08   12.98    9.10   17.38   12.98    9.10   17.38
-   16  728461107I1320K CA  CA   890910547   24.84   13.99   10.85   15.46   13.99   10.85   15.46
-   17  728471107I1501G CA  CA   890912042   21.20   13.21    7.99   14.11   13.21    7.99   14.11
-   18  728481107I1502M CA  CA   890912046   18.80   13.74    5.06    9.33   13.74    5.06    9.33
-   19  728491107I1503S CA  CA   890912054   16.42   13.78    2.64    4.56   13.78    2.64    4.56
-   20  728561108G1317G CA  CA   891710529   19.09   14.00    5.09    8.64   14.00    5.09    8.64
-   21  728571108G1318C CA  CA   891710533   17.66   13.02    4.65    7.35   13.02    4.65    7.35
-   22  728681109Y1316Y CA  CA   892110517   17.89   13.85    4.04    6.48   13.85    4.04    6.48
-   23  728691109Y1317G CA  CA   892110529   16.44   13.45    2.99    4.94   13.45    2.99    4.94
+    1  66259 779T1102I CA  CA   6241 8872   14.45   11.59    2.87    5.53   11.59    2.87    5.53
+    2  66260 779T1103D CA  CA   6241 8880   16.53   12.74    3.79    6.16   12.74    3.79    6.16
+    3  66291 780P1102I CA  CA   6248 8872   15.88   12.74    3.14    5.66   12.74    3.14    5.66
+    4  66323 781L1102I CA  CA   6255 8872   14.46   11.36    3.10    6.40   11.36    3.10    6.40
+    5  66324 781L1103D CA  CA   6255 8880   17.82   13.28    4.54    7.92   13.28    4.54    7.92
+    6  66352 782P1102I CA  CA   6263 8872   13.38   10.23    3.15    6.40   10.23    3.15    6.40
+    7  66353 782P1103D CA  CA   6263 8880   17.03   11.51    5.52    9.45   11.51    5.52    9.45
+    8  66354 782P1105K CA  CA   6263 8894   21.48   13.27    8.21   14.87   13.27    8.21   14.87
+    9  66374 783D1102I CA  CA   6270 8872   16.35   13.39    2.97    5.14   13.39    2.97    5.14
+   10  66402 784E1102I CA  CA   6278 8872   14.80   12.28    2.51    4.52   12.28    2.51    4.52
+   11  66403 784E1103D CA  CA   6278 8880   18.87   13.65    5.21    7.66   13.65    5.21    7.66
+   12  66404 784E1105K CA  CA   6278 8894   24.52   13.16   11.35   19.61   13.16   11.35   19.61
+   13  66433 785L1102I CA  CA   6287 8872   14.24   11.73    2.51    5.05   11.73    2.51    5.05
+   14  66434 785L1105K CA  CA   6287 8894   22.93   13.98    8.95   16.57   13.98    8.95   16.57
+   15  67666 823G1102I CA  CA   6607 8872   15.77   12.97    2.80    5.53   12.97    2.80    5.53
+   16  67691 824E1102I CA  CA   6611 8872   15.22   12.79    2.43    4.83   12.79    2.43    4.83
+   17  712951004H1105K CA  CA   8098 8894   18.44   13.79    4.65    8.49   13.79    4.65    8.49
+   18  713141005L1105K CA  CA   8108 8894   15.43   13.07    2.36    4.65   13.07    2.36    4.65
+   19  714231010K1105K CA  CA   8146 8894   13.75   10.44    3.31    6.03   10.44    3.31    6.03
+   20  714401011A1105K CA  CA   8155 8894   15.95    9.55    6.39   13.61    9.55    6.39   13.61
+   21  714411011A1106S CA  CA   8155 8903   21.13   13.29    7.85   14.11   13.29    7.85   14.11
+   22  714491012L1105K CA  CA   8160 8894   19.55   12.16    7.39   13.61   12.16    7.39   13.61
+   23  714561013P1105K CA  CA   8168 8894   22.31   12.09   10.22   17.12   12.09   10.22   17.12
+   24  714651014L1105K CA  CA   8175 8894   23.93   12.17   11.76   22.41   12.17   11.76   22.41
+   25  724791079G1109Y CA  CA   8687 8921   16.24   12.82    3.41    4.60   12.82    3.41    4.60
+   26  728291102I1105K CA  CA   8872 8894   11.15    6.02    5.13    5.17    6.02    5.13    5.17
+   27  728301102I1106S CA  CA   8872 8903   16.17    8.49    7.68    5.49    8.49    7.68    5.49
+   28  728411107I1254R CA  CA   890910049   14.99   11.49    3.50    6.29   11.49    3.50    6.29
+   29  728421107I1316Y CA  CA   890910517   25.05   13.40   11.64   21.14   13.40   11.64   21.14
+   30  728431107I1317G CA  CA   890910529   25.70   11.30   14.40   28.53   11.30   14.40   28.53
+   31  728441107I1318C CA  CA   890910533   23.98    9.89   14.08   27.07    9.89   14.08   27.07
+   32  728451107I1319L CA  CA   890910539   24.96   12.98   11.98   22.88   12.98   11.98   22.88
+   33  728461107I1320K CA  CA   890910547   28.00   13.99   14.01   19.95   13.99   14.01   19.95
+   34  728471107I1501G CA  CA   890912042   24.35   13.21   11.14   19.68   13.21   11.14   19.68
+   35  728481107I1502M CA  CA   890912046   21.48   13.74    7.74   14.26   13.74    7.74   14.26
+   36  728491107I1503S CA  CA   890912054   19.28   13.78    5.50    9.51   13.78    5.50    9.51
+   37  728561108G1317G CA  CA   891710529   23.25   14.00    9.25   15.70   14.00    9.25   15.70
+   38  728571108G1318C CA  CA   891710533   21.62   13.02    8.61   13.61   13.02    8.61   13.61
+   39  728681109Y1316Y CA  CA   892110517   20.12   13.85    6.27   10.04   13.85    6.27   10.04
+   40  728691109Y1317G CA  CA   892110529   20.40   13.45    6.95   11.47   13.45    6.95   11.47
+   41  728701109Y1318C CA  CA   892110533   18.88   13.05    5.83    8.68   13.05    5.83    8.68
 
 -------------------------------------------------------------------------------------------------
 
@@ -1061,9 +1159,16 @@ Feature 10                           : Distance restraints 2 (N-O)
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1 1015651105K1011A N   O    8893 8158   14.18   10.03    4.14    7.30   10.03    4.14    7.30
-    2 1015761106S1102I N   O    8902 8878   11.64    4.85    6.79    4.94    4.85    6.79    4.94
-    3 1055921318C1107I N   O   10532 8915   19.41   10.53    8.88   14.33   10.53    8.88   14.33
+    1  95435 782P1102I N   O    6262 8878   15.63   10.70    4.93    8.34   10.70    4.93    8.34
+    2  997731011A1104S N   O    8154 8892   13.84   10.64    3.20    5.39   10.64    3.20    5.39
+    3 1015651105K1011A N   O    8893 8158   16.45   10.03    6.41   11.30   10.03    6.41   11.30
+    4 1015701105K1101S N   O    8893 8870    8.70    4.31    4.39    6.61    4.31    4.39    6.61
+    5 1015711105K1102I N   O    8893 8878    9.03    3.19    5.83    5.93    3.19    5.83    5.93
+    6 1015731106S1099K N   O    8902 8855   13.35    9.47    3.88    5.18    9.47    3.88    5.18
+    7 1015741106S1100K N   O    8902 8864   12.57    7.86    4.71    5.72    7.86    4.71    5.72
+    8 1015751106S1101S N   O    8902 8870   13.40    7.02    6.38    5.99    7.02    6.38    5.99
+    9 1015761106S1102I N   O    8902 8878   13.74    4.85    8.89    6.47    4.85    8.89    6.47
+   10 1055921318C1107I N   O   10532 8915   24.05   10.53   13.51   21.81   10.53   13.51   21.81
 
 -------------------------------------------------------------------------------------------------
 
@@ -1071,10 +1176,7 @@ Feature 13                           : Mainchain Omega dihedral restraints
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1  46163   3S   3S CA  C      19   22  178.05   -0.75  178.80   36.48   -0.75  178.80   36.48
-    2  46178  18T  18T CA  C     125  129  178.56   -0.75  179.31   36.59   -0.75  179.31   36.59
-    3  46187  27F  27F CA  C     182  190   -2.98 -179.18  176.20   40.95 -179.18  176.20   40.95
-    4  474501290Q1290Q CA  C   1033410340   -2.00 -179.18  177.18   41.18 -179.18  177.18   41.18
+    1  472601100K1100K CA  C    8857 8863 -154.09 -180.00   25.91    5.18 -180.00   25.91    5.18
 
 -------------------------------------------------------------------------------------------------
 
@@ -1082,64 +1184,20 @@ Feature 25                           : Phi/Psi pair of dihedral restraints
 List of the RVIOL violations larger than   :       6.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1  44564   1M   2K C   N       7    9  -97.87 -118.00   23.03    1.08   56.60 -169.38   14.40
-    1          2K   2K N   CA      9   10  150.29  139.10                   38.60
-    2  44567   4P   5A C   N      29   31  -88.87  -68.20   27.20    1.73  -62.50  158.33   27.32
-    2          5A   5A N   CA     31   32  162.98  145.30                  -40.90
-    3  44571   8P   9L C   N      58   60 -114.00  -63.50   77.17   13.72 -108.50  128.06    6.86
-    3          9L   9L N   CA     60   61  -99.56  -41.20                  132.50
-    4  44573  10S  11M C   N      72   74 -101.71 -125.60   52.54    2.85   56.30 -140.41   20.11
-    4         11M  11M N   CA     74   75 -172.71  140.50                   34.80
-    5  44583  20A  21S C   N     141  143 -171.15 -136.60   40.36    1.23  -64.10 -173.32   21.25
-    5         21S  21S N   CA    143  144  172.06  151.20                  -35.00
-    6  44757 194E 195N C   N    1539 1541  -98.09 -119.90   92.38    3.66  -63.20   94.97   10.38
-    6        195N 195N N   CA   1541 1542   47.23  137.00                  -41.10
-    7  44967 404R 405N C   N    3245 3247  -97.78 -119.90   47.43    1.60  -63.20  140.47   15.90
-    7        405N 405N N   CA   3247 3248   95.04  137.00                  -41.10
-    8  44975 412W 413S C   N    3317 3319 -175.03 -136.60   46.64    1.42  -64.10 -175.55   21.37
-    8        413S 413S N   CA   3319 3320  177.63  151.20                  -35.00
-    9  44978 415S 416E C   N    3337 3339 -127.42 -117.80   16.33    0.58   54.60 -152.02   27.23
-    9        416E 416E N   CA   3339 3340  150.00  136.80                   42.40
-   10  44995 432T 433N C   N    3481 3483  -79.12 -119.90   41.55    1.52   55.90  162.01   11.99
-   10        433N 433N N   CA   3483 3484  129.04  137.00                   39.50
-   11  45049 486K 487N C   N    3905 3907 -119.88 -119.90   34.82    1.58  -63.20  154.09   16.85
-   11        487N 487N N   CA   3907 3908  102.18  137.00                  -41.10
-   12  45119 556P 557I C   N    4481 4483   38.50  -97.30  141.54    7.42 -120.60  164.81    9.89
-   12        557I 557I N   CA   4483 4484   87.31  127.20                  130.30
-   13  45153 590C 591S C   N    4762 4764   35.99  -72.40  108.41    7.81  -64.10 -162.45   13.07
-   13        591S 591S N   CA   4764 4765  154.68  152.40                  -35.00
-   14  45295 732E 733E C   N    5873 5875  -66.21  -69.30    3.39    0.21   54.60  156.00   10.64
-   14        733E 733E N   CA   5875 5876  141.10  142.50                   42.40
-   15  45546 983L 984N C   N    7935 7937 -101.36  -63.20   81.69    8.80  -63.20   81.69    8.80
-   15        984N 984N N   CA   7937 7938   31.13  -41.10                  -41.10
-   16  456661103D1104S C   N    8885 8887 -177.69 -136.60   42.60    1.98  -64.10 -151.40   14.22
-   16       1104S1104S N   CA   8887 8888  139.97  151.20                  -35.00
-   17  456681105K1106S C   N    8900 8902  154.87 -136.60   71.60    2.36  -64.10 -151.88   25.21
-   17       1106S1106S N   CA   8902 8903  171.94  151.20                  -35.00
-   18  457651202V1203N C   N    9655 9657 -136.06 -119.90  102.86    5.02  -63.20  105.66   11.72
-   18       1203N1203N N   CA   9657 9658   35.42  137.00                  -41.10
-   19  457781215K1216S C   N    9763 9765  -50.23  -72.40   28.79    1.42  -64.10  169.60   13.16
-   19       1216S1216S N   CA   9765 9766  134.03  152.40                  -35.00
-   20  457791216S1217N C   N    9769 9771 -114.71 -119.90   15.51    0.57  -63.20  171.41   19.07
-   20       1217N1217N N   CA   9771 9772  122.39  137.00                  -41.10
-   21  458441281C1282P C   N   1026410266  -75.52  -64.50   28.40    2.71  -58.70  152.45   11.29
-   21       1282P1282P N   CA  1026610267  121.02  147.20                  -30.50
-   22  458461283T1284R C   N   1027810280 -112.14  -63.00   96.39   10.91  -72.10  107.78    9.06
-   22       1284R1284R N   CA  1028010281   41.83  -41.10                  141.90
-   23  458491286N1287F C   N   1030610308 -133.65 -124.20    9.54    0.41   58.10 -159.49   30.69
-   23       1287F1287F N   CA  1030810309  141.96  143.30                   32.90
-   24  458501287F1288N C   N   1031710319 -119.88 -119.90    7.89    0.36  -63.20  179.40   19.87
-   24       1288N1288N N   CA  1031910320  129.11  137.00                  -41.10
-   25  458551292K1293N C   N   1035810360 -127.78 -119.90   37.42    1.51  -63.20  159.03   23.54
-   25       1293N1293N N   CA  1036010361  173.58  137.00                  -41.10
-   26  458621299A1300A C   N   1040410406 -171.08 -134.00   40.52    0.92   55.40 -177.01   20.80
-   26       1300A1300A N   CA  1040610407  163.33  147.00                   38.20
-   27  458681305S1306S C   N   1043810440  -76.83  -72.40    9.74    0.45  -64.10  164.41   12.71
-   27       1306S1306S N   CA  1044010441  161.08  152.40                  -35.00
-   28  460001437A1438V C   N   1153011532  -98.68  -62.40   64.70    7.12  -62.40   64.70    7.12
-   28       1438V1438V N   CA  1153211533   11.16  -42.40                  -42.40
-   29  461001537M1538E C   N   1234512347  -92.47  -63.60   64.79    7.52  -63.60   64.79    7.52
-   29       1538E1538E N   CA  1234712348   17.70  -40.30                  -40.30
+    1  456651102I1103D C   N    8877 8879  -72.25  -63.30   49.63    6.70  -63.30   49.63    6.70
+    1       1103D1103D N   CA   8879 8880  -88.82  -40.00                  -40.00
+    2  456661103D1104S C   N    8885 8887  166.06 -136.60   57.84    2.10  -64.10 -149.09   24.65
+    2       1104S1104S N   CA   8887 8888  158.78  151.20                  -35.00
+    3  456681105K1106S C   N    8900 8902  166.70 -136.60   62.36    1.94  -64.10 -163.66   23.52
+    3       1106S1106S N   CA   8902 8903  177.16  151.20                  -35.00
+    4  456701107I1108G C   N    8914 8916  140.05 -167.20   53.38    1.23  -80.20  139.95    9.55
+    4       1108G1108G N   CA   8916 8917  166.41  174.60                  174.10
+    5  456721109Y1110S C   N    8930 8932  158.07 -136.60   84.84    2.64  -72.40  139.92    8.21
+    5       1110S1110S N   CA   8932 8933 -154.67  151.20                  152.40
+    6  457771214D1215K C   N    9754 9756  -89.47 -118.00   80.91    3.45  -62.90  107.53   12.76
+    6       1215K1215K N   CA   9756 9757   63.39  139.10                  -40.80
+    7  457781215K1216S C   N    9763 9765  -83.61  -72.40   11.22    0.82  -64.10  174.19   13.87
+    7       1216S1216S N   CA   9765 9766  151.90  152.40                  -35.00
 
 -------------------------------------------------------------------------------------------------
 
@@ -1147,16 +1205,20 @@ Feature 26                           : Distance restraints 4 (SDCH-SDCH)
 List of the RVIOL violations larger than   :       4.5000
 
     #   ICSR  RESNO1/2 ATM1/2   INDATM1/2    FEAT   restr    viol   rviol   RESTR    VIOL   RVIOL
-    1 1457401107I1318C CD1 CB   891310534   16.05    4.78   11.27    7.34    4.78   11.27    7.34
-    2 1457411107I1318C CD1 SG   891310535   14.46    3.52   10.94    7.27    3.52   10.94    7.27
+    1 1451251011A1105K CB  CD   8156 8897   13.23    4.95    8.28    5.60    4.95    8.28    5.60
+    2 1451261011A1105K CB  CE   8156 8898   11.73    4.00    7.74    5.31    4.00    7.74    5.31
+    3 1451271011A1105K CB  NZ   8156 8899   11.16    3.57    7.58    5.23    3.57    7.58    5.23
+    4 1457401107I1318C CD1 CB   891310534   20.71    4.78   15.93   10.37    4.78   15.93   10.37
+    5 1457411107I1318C CD1 SG   891310535   19.82    3.52   16.29   10.83    3.52   16.29   10.83
 
 
 report______> Distribution of short non-bonded contacts:
 
+  serious non-bonded atom clash:  6822 9700   1.804
 
 DISTANCE1:  0.00 2.10 2.20 2.30 2.40 2.50 2.60 2.70 2.80 2.90 3.00 3.10 3.20 3.30 3.40
 DISTANCE2:  2.10 2.20 2.30 2.40 2.50 2.60 2.70 2.80 2.90 3.00 3.10 3.20 3.30 3.40 3.50
-FREQUENCY:     0    0    0    0    0   49  105  361  647 1028 1081 1301 1693 1811 1996
+FREQUENCY:     1    0    0    1    0   10   92  190  419  647  781  900 1263 1765 1886
 
 
 << end of ENERGY.
@@ -1166,9 +1228,9 @@ wrpdb___568_> Residues, atoms, selected atoms:     1599    12823    12823
 >> Summary of successfully produced models:
 Filename                          molpdf     DOPE score    GA341 score
 ----------------------------------------------------------------------
-Q9UPY3_cut.B99990001.pdb     11130.96875  -184521.59375        1.00000
+Q9UPY3_cut.B99990001.pdb      3991.76904     -913.14490        1.00000
 
-Top model: Q9UPY3_cut.B99990001.pdb (DOPE score -184521.594)
+Top model: Q9UPY3_cut.B99990001.pdb (DOPE score -913.145)
 
 
 RENUMBERING:
